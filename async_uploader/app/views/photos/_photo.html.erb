@@ -1,0 +1,14 @@
+<div class="col-sm-4 col-xs-6">
+  <div class="panel panel-default">
+    <div class="panel-thumbnail">
+      <%= link_to image_tag(photo.image.thumb('360x360#').url, alt: photo.author, class: 'img-thumbnail'),
+                  photo.image.remote_url, target: '_blank' %>
+    </div>
+    <div class="panel-body">
+      <p class="text-primary">Author: <%= photo.author %></p>
+      <h4 clss="text-success">Title: <%= photo.title %></h4>
+      <p clss="text-info">Note: <%= photo.note %></p>
+      <p class="text-muted">Created time: <%= photo.created_at %></p>
+    </div>
+  </div><!--/panel-->
+</div><!--/col-->
